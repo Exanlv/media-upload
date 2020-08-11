@@ -1,0 +1,13 @@
+#!/bin/bash
+
+REQUEST_URL=domain.com?extension=${1#*.};
+
+echo $REQUEST_URL;
+
+RESULT=$(curl $REQUEST_URL);
+
+FILE_PATH=$(echo $RESULT | awk '{print $1;}');
+
+rsync --chmod=u+rw,g+r,o+r $1 username@server:$FILE_PATH;
+
+echo $RESULT | awk '{print $2;}' | xclip -sel clip;
