@@ -25,6 +25,8 @@ Change `username@server` to ssh login
 
 (Optional) Add crontab for delete-files.js (recommended timing `0 0 * * *`)
 
+Add files for upload-media and upload-screenshot somewhere your path (optional)
+
 ## Dependencies
 - xclip
 - rsync
@@ -32,3 +34,4 @@ Change `username@server` to ssh login
 - node.js
 - nginx / apache / etc
 - curl
+- scrot (Required for auto screenshot upload, optional)

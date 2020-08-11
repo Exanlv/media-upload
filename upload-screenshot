@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scrot -s -o /tmp/screenshot.png && upload-media /tmp/screenshot.png && rm /tmp/screenshot.png
